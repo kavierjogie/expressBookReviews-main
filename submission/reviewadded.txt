@@ -1,0 +1,41 @@
+$ curl '-X' 'PUT' 'http://localhost:5000/customer/auth/review/1?review=NoLogin'
+{
+    "message": "User not logged in"
+}
+HTTP status: 403
+
+$ curl '-b' 'cookies1.txt' '-X' 'PUT' 'http://localhost:5000/customer/auth/review/1?review=Great%20book'
+{
+    "message": "Review for ISBN 1 added by testuser1",
+    "reviews": {
+        "testuser1": "Great book"
+    }
+}
+HTTP status: 200
+
+$ curl '-b' 'cookies1.txt' '-X' 'PUT' 'http://localhost:5000/customer/auth/review/1?review=Changed%20my%20mind'
+{
+    "message": "Review for ISBN 1 modified by testuser1",
+    "reviews": {
+        "testuser1": "Changed my mind"
+    }
+}
+HTTP status: 200
+
+$ curl '-b' 'cookies2.txt' '-X' 'PUT' 'http://localhost:5000/customer/auth/review/1?review=Second%20user%20review'
+{
+    "message": "Review for ISBN 1 added by testuser2",
+    "reviews": {
+        "testuser1": "Changed my mind",
+        "testuser2": "Second user review"
+    }
+}
+HTTP status: 200
+
+$ curl 'http://localhost:5000/review/1'
+{
+    "testuser1": "Changed my mind",
+    "testuser2": "Second user review"
+}
+HTTP status: 200
+
