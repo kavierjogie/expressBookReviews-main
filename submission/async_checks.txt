@@ -1,4 +1,4 @@
-$ curl 'http://localhost:5000/async/books'
+$ curl http://localhost:5000/async/books
 {
     "1": {
         "author": "Chinua Achebe",
@@ -53,23 +53,15 @@ $ curl 'http://localhost:5000/async/books'
         "reviews": {}
     }
 }
-HTTP status: 200
 
-$ curl 'http://localhost:5000/async/isbn/2'
+$ curl http://localhost:5000/async/isbn/2
 {
     "author": "Hans Christian Andersen",
     "title": "Fairy tales",
     "reviews": {}
 }
-HTTP status: 200
 
-$ curl 'http://localhost:5000/async/isbn/__proto__'
-{
-    "message": "Book not found"
-}
-HTTP status: 404
-
-$ curl 'http://localhost:5000/async/author/Unknown'
+$ curl http://localhost:5000/async/author/Unknown
 [
     {
         "isbn": "4",
@@ -96,9 +88,8 @@ $ curl 'http://localhost:5000/async/author/Unknown'
         "reviews": {}
     }
 ]
-HTTP status: 200
 
-$ curl 'http://localhost:5000/async/title/Pride%20and%20Prejudice'
+$ curl http://localhost:5000/async/title/Pride%20and%20Prejudice
 [
     {
         "isbn": "8",
@@ -107,11 +98,9 @@ $ curl 'http://localhost:5000/async/title/Pride%20and%20Prejudice'
         "reviews": {}
     }
 ]
-HTTP status: 200
 
-$ curl 'http://localhost:5000/async/title/Nothing'
+$ curl http://localhost:5000/async/title/Nothing
 {
     "message": "No books found with this title"
 }
-HTTP status: 404
 

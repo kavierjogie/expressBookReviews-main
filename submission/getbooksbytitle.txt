@@ -1,4 +1,4 @@
-$ curl 'http://localhost:5000/title/Things%20Fall%20Apart'
+$ curl http://localhost:5000/title/Things%20Fall%20Apart
 [
     {
         "isbn": "1",
@@ -7,11 +7,4 @@ $ curl 'http://localhost:5000/title/Things%20Fall%20Apart'
         "reviews": {}
     }
 ]
-HTTP status: 200
-
-$ curl 'http://localhost:5000/title/Nothing'
-{
-    "message": "No books found with this title"
-}
-HTTP status: 404
 

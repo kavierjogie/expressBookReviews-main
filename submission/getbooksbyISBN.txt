@@ -1,14 +1,7 @@
-$ curl 'http://localhost:5000/isbn/1'
+$ curl http://localhost:5000/isbn/1
 {
     "author": "Chinua Achebe",
     "title": "Things Fall Apart",
     "reviews": {}
 }
-HTTP status: 200
-
-$ curl 'http://localhost:5000/isbn/999'
-{
-    "message": "Book not found"
-}
-HTTP status: 404
 

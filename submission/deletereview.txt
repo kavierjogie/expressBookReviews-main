@@ -1,21 +1,8 @@
-$ curl '-b' 'cookies1.txt' '-X' 'DELETE' 'http://localhost:5000/customer/auth/review/1'
+$ curl -b cookies1.txt -X DELETE http://localhost:5000/customer/auth/review/1
 {
     "message": "Review for ISBN 1 by testuser1 deleted",
     "reviews": {
         "testuser2": "Second user review"
     }
 }
-HTTP status: 200
-
-$ curl '-b' 'cookies1.txt' '-X' 'DELETE' 'http://localhost:5000/customer/auth/review/1'
-{
-    "message": "No review by testuser1 for ISBN 1"
-}
-HTTP status: 404
-
-$ curl 'http://localhost:5000/review/1'
-{
-    "testuser2": "Second user review"
-}
-HTTP status: 200
 

@@ -1,4 +1,4 @@
-$ curl 'http://localhost:5000/author/Jane%20Austen'
+$ curl http://localhost:5000/author/Jane%20Austen
 [
     {
         "isbn": "8",
@@ -7,11 +7,4 @@ $ curl 'http://localhost:5000/author/Jane%20Austen'
         "reviews": {}
     }
 ]
-HTTP status: 200
-
-$ curl 'http://localhost:5000/author/Nobody'
-{
-    "message": "No books found for this author"
-}
-HTTP status: 404
 

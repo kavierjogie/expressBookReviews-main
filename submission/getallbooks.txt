@@ -1,4 +1,4 @@
-$ curl 'http://localhost:5000/'
+$ curl http://localhost:5000/
 {
     "1": {
         "author": "Chinua Achebe",
@@ -51,5 +51,4 @@ $ curl 'http://localhost:5000/'
         "reviews": {}
     }
 }
-HTTP status: 200
 

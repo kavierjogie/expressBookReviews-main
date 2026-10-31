@@ -1,4 +1,3 @@
-$ curl 'http://localhost:5000/review/1'
+$ curl http://localhost:5000/review/1
 {}
-HTTP status: 200
 
